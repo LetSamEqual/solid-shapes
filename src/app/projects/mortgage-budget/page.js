@@ -106,7 +106,7 @@ const MortgageBudget = () => {
             <br />
             <br />
             To ensure a strictness for the input fields, I added an ‘on key
-            down' function that would check what character the user was trying
+            down’ function that would check what character the user was trying
             to input into the field. If the user types a character other than a
             number or a decimal point, a warning appears under the field
             indicating the rule for the input system to the user and disallow
