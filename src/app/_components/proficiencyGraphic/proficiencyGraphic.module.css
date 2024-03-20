@@ -1,0 +1,26 @@
+.componentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  gap: 40px;
+}
+
+.logosContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.graphicHeading {
+  width: 128px;
+  text-wrap: wrap;
+  text-align: center;
+}

@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100vw;
+  height: 100vh;
+  min-width: 300px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  color: white;
+}
+
+.yellowStripe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eac335;
+  width: 100vw;
+  padding: 50px;
+}
+
+.pinkStripe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fa7268;
+  width: 100vw;
+  padding: 50px;
+}
+
+.purpleStripe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ac4b5c;
+  width: 100vw;
+  padding: 50px;
+}
+
+.textContainer {
+  width: 80vw;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .textContainer {
+    font-size: 1.2rem;
+  }
+}

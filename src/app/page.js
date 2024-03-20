@@ -1,95 +1,98 @@
-import Image from "next/image";
+"use client";
+
 import styles from "./page.module.css";
 
+import Carousel from "./_components/project-carousel/project-carousel.component";
+import Navbar from "./_components/navbar/navbar.component";
+import Proficiencies from "./_components/proficiencyGraphic/proficiencyGraphic.component";
+import { useState, useRef } from "react";
+import Timeline from "./_components/programming-timeline/programming-timeline";
+
 export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+  const [opacityLevel, setOpacityLevel] = useState(1);
+
+  const sectionOneRef = useRef();
+  const sectionTwoRef = useRef();
+
+  const handleScroll = (e) => {
+    const sectionOneHeight = sectionOneRef.current.clientHeight;
+    const sectionTwoHeight = sectionTwoRef.current.clientHeight;
+
+    const target = e.currentTarget;
+
+    if (target.scrollTop < sectionOneHeight + 79) {
+      setScrolled(false);
+    }
+    if (target.scrollTop > sectionOneHeight + 80) {
+      setScrolled(true);
+    }
+
+    // if (target.scrollTop < sectionOneHeight + 449) {
+    //   setOpacityLevel(1);
+    // }
+
+    // if (target.scrollTop > sectionOneHeight + 450) {
+    //   const opacity =
+    //     1 -
+    //     ((target.scrollTop - sectionOneHeight - 450) / sectionTwoHeight) * 4;
+    //   setOpacityLevel(opacity);
+    // }
+  };
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className={styles.pageContainer} onScroll={handleScroll}>
+      <Navbar props={scrolled} />
+      <main id="main" className={styles.sectionsContainer}>
+        <section ref={sectionOneRef} className={`${styles.introContainer}`}>
+          <h1 className={styles.title}>Solid Shapes</h1>
+          <div className={styles.subheaderContainer}>
+            <h3 className={styles.introText}>Your next</h3>
+            <div className={styles.rolesCeiling}></div>
+            <div className={styles.rolesFloor}></div>
+            <div className={styles.introSpanContainer}>
+              <h3
+                className={`${styles.introSpanCommon} ${styles.firstIntroSpan}`}
+              >
+                web developer
+              </h3>{" "}
+              <h3
+                className={`${styles.introSpanCommon} ${styles.secondIntroSpan}`}
+              >
+                UI specialist
+              </h3>
+              <h3
+                className={`${styles.introSpanCommon} ${styles.thirdIntroSpan}`}
+              >
+                content writer
+              </h3>
+              <h3
+                className={`${styles.introSpanCommon} ${styles.fourthIntroSpan}`}
+              >
+                web developer
+              </h3>
+            </div>
+          </div>
+        </section>
+        <section className={styles.firstTransition}></section>
+        <section
+          ref={sectionTwoRef}
+          className={`${styles.proficiencyContainer}`}
+        >
+          <div
+            className={styles.proficiencyComponentContainer}
+            // style={{ opacity: `${opacityLevel}` }}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            <Proficiencies />
+          </div>
+        </section>
+        <section className={`${styles.projectContainer}`}>
+          <h2>Portfolio</h2>
+          <div className={styles.carouselContainer}>
+            <Carousel />
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: wrap;
+  width: 100vw;
+  max-width: 900px;
+  height: fit-content;
+  padding: 10px;
+  gap: 40px;
+  position: relative;
+  color: white;
+}
+
+.leftColumnContainer {
+  width: 100%;
+}
+
+.leftTextContainer {
+  align-self: flex-start;
+  position: relative;
+  width: 45vw;
+  max-width: 400px;
+  text-align: right;
+}
+
+.rightTextContainer {
+  align-self: flex-end;
+  position: relative;
+  width: 45vw;
+  max-width: 400px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.centreLine {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  border: 1px solid white;
+}
