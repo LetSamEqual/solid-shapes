@@ -31,7 +31,7 @@ const dm_sans = DM_Sans({
 
 export const metadata = {
   title: "Solid Shapes",
-  description: "A personal blog for tracking my frontend developer journey",
+  description: "Create something that people want to learn about",
 };
 
 export default function RootLayout({ children }) {
