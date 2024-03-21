@@ -2,7 +2,6 @@ import styles from "./project-carousel-item.module.css";
 import Link from "next/link";
 
 const CarouselItem = ({ props }) => {
-  console.log(props.backgroundImage);
   return (
     <Link href={props.route}>
       <div
@@ -12,7 +11,7 @@ const CarouselItem = ({ props }) => {
         }}
       >
         <div className={styles.descriptionContainer}>
-          <h1>{props.name}</h1>
+          <h2>{props.name}</h2>
           <h3>{props.subheader}</h3>
         </div>
       </div>

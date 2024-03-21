@@ -2,7 +2,7 @@ import { Lexend_Peta, Montserrat, Poppins, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const lexend_peta = Lexend_Peta({
-  weight: "300",
+  weight: ["100", "200", "300"],
   subsets: ["latin"],
   variable: "--font-lexend_peta",
   display: "swap",

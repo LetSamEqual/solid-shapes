@@ -1,6 +1,6 @@
 .pageContainer {
   height: 100vh;
-  overflow: auto;
+  overflow-x: hidden;
   overscroll-behavior-inline: contain;
   color: black;
 }
@@ -38,46 +38,127 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  font-size: 1rem;
 }
 
 .introSpanContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 35px;
   position: absolute;
-  width: 300px;
+  width: 100vw;
+  -webkit-transform: translate(137px, 0px);
+  -ms-transform: translate(137px, 0px);
   transform: translate(135px, 0px);
   text-overflow: wrap;
   text-align: left;
   animation: introSpanContainerScrollUp 8s linear infinite;
+  -webkit-animation: introSpanContainerScrollUp 8s linear infinite;
 }
 
 @keyframes introSpanContainerScrollUp {
   0% {
-    transform: translate(135px, 0px);
+    transform: translate(145px, 0px);
   }
-  11.11% {
-    transform: translate(135px, 0px);
-  }
-
-  22.22% {
-    transform: translate(135px, -58px);
+  11% {
+    transform: translate(145px, 0px);
   }
 
-  44.44% {
-    transform: translate(135px, -58px);
+  22% {
+    transform: translate(145px, -59px);
   }
-  55.55% {
-    transform: translate(135px, -116px);
+
+  44% {
+    transform: translate(145px, -59px);
   }
-  77.77% {
-    transform: translate(135px, -116px);
+  56% {
+    transform: translate(145px, -118px);
   }
-  88.88% {
-    transform: translate(135px, -174px);
+  78% {
+    transform: translate(145px, -118px);
+  }
+  89% {
+    transform: translate(145px, -177px);
   }
   100% {
-    transform: translate(135px, -174px);
+    transform: translate(145px, -177px);
+  }
+}
+
+@supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) and
+  (list-style-type: "*") {
+  .introSpanContainer {
+    animation: introSpanContainerScrollUp 8s linear infinite;
+    -webkit-animation: introSpanContainerScrollUp 8s linear infinite;
+  }
+
+  @keyframes introSpanContainerScrollUp {
+    0% {
+      transform: translate(134px, 0px);
+    }
+    11% {
+      transform: translate(134px, 0px);
+    }
+
+    22% {
+      transform: translate(134px, -58px);
+    }
+
+    44% {
+      transform: translate(134px, -58px);
+    }
+    56% {
+      transform: translate(134px, -116px);
+    }
+    78% {
+      transform: translate(134px, -116px);
+    }
+    89% {
+      transform: translate(134px, -174px);
+    }
+    100% {
+      transform: translate(134px, -174px);
+    }
+  }
+}
+
+@supports (-moz-appearance: none) {
+  .introSpanContainer {
+    animation: introSpanContainerScrollUp 8s linear infinite;
+  }
+
+  @keyframes introSpanContainerScrollUp {
+    0% {
+      transform: translate(138px, 0px);
+    }
+    11% {
+      transform: translate(138px, 0px);
+    }
+
+    22% {
+      transform: translate(138px, -58px);
+    }
+
+    44% {
+      transform: translate(138px, -58px);
+    }
+    56% {
+      transform: translate(138px, -118px);
+    }
+    78% {
+      transform: translate(138px, -118px);
+    }
+    89% {
+      transform: translate(138px, -177px);
+    }
+    100% {
+      transform: translate(138px, -177px);
+    }
   }
 }
 
@@ -91,7 +172,7 @@
     #eac435,
     #eac3353e
   );
-  width: 400px;
+  width: 100vw;
   height: 220px;
   position: absolute;
   z-index: 2;
@@ -108,7 +189,7 @@
     #eac435,
     #eac435
   );
-  width: 400px;
+  width: 100vw;
   height: 220px;
   position: absolute;
   z-index: 2;
