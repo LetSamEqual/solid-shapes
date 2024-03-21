@@ -16,10 +16,10 @@ const CrwnClothing = () => {
         <div className={styles.firstSectionTextContainer}>
           <h3>The short version</h3>
           <p>
-            I’d been tasked with building an ecommerce site from the ground up
-            for a small fashion outlet ‘Crown Clothing’. The site needed to be
-            dynamic enough that the client could add and remove products quickly
-            and have these changes reflected immediately.
+            I set myself the task of building an ecommerce site from the ground
+            up for mock fashion outlet ‘Crown Clothing’. The site needed to be
+            dynamic enough that the ‘client’ could add and remove products
+            quickly and have these changes reflected immediately.
           </p>
           <p>
             To ensure ease of use, I employed Firestore for database management,
@@ -36,17 +36,17 @@ const CrwnClothing = () => {
         <div className={styles.imageAndContentContainer}>
           <div className={styles.secondSectionTextContainer}>
             <p>
-              Crown Clothing was a fashion outlet focused on men’s and women’s
-              streetwear. As the product range was developing quickly, I needed
-              to create a modern website that was dynamic enough to accomodate a
+              I envisioned Crown Clothing as a fashion outlet focused on men’s
+              and women’s streetwear. As the looks and products in this area can
+              change rapidly based on trends, sales and supply, I needed to
+              create a modern website that was dynamic enough to accomodate a
               quickly changing product range. It also needed to be robust enough
-              that it could be easily changed and adapted later as the company
-              grew.
+              that it could be easily changed and adapted later to ensure it
+              could grow with a company.
               <br />
               <br />
-              With this in mind I worked to discover the essentials of the
-              company, namely what their focus was and their desired look.
-              Taking the concept and layout from their own team, I began by
+              With this in mind I worked to design a theme and layout that would
+              mirror the edgy, modern feel of the brand. From there I began
               building a basic version of the landing page, which established
               the skeleton of the project – that is, five product pages, a cart
               dropdown, a check-out page, and a ‘sign in and create
@@ -121,8 +121,7 @@ const CrwnClothing = () => {
             <br />
             The grand total of all items in the cart is shown at the bottom of
             the page. The total payable is also saved to the Cart Context so it
-            remains attached to the appropriate dataset. This then links to a
-            PayPal system to manage payments.
+            remains attached to the appropriate dataset.
           </p>
         </div>
       </section>
@@ -131,7 +130,7 @@ const CrwnClothing = () => {
           <p>
             After building the system for handling products, I began to build
             the sign-in system. Here I decided to remain in the same ecosystem
-            as Firestore by using the Firebase system. This meant the client
+            as Firestore by using the Firebase system. This meant the ‘client’
             only needed one account to manage the site’s two major backend
             systems.
             <br />
@@ -143,11 +142,6 @@ const CrwnClothing = () => {
             <br />
             <br />I then used a seperate ‘Sign-in Context’ to hold the users
             sign-in state as they continue to navigate the SPA.
-            <br />
-            <br />
-            With the products, sign-in and payment systems in place, along with
-            a happy client, I handed over the site to the company for their own
-            team to manage going forward.
           </p>
         </div>
         <div

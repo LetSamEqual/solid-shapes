@@ -19,6 +19,10 @@
   color: white;
 }
 
+.yellowAccent {
+  color: #eac335;
+}
+
 .yellowStripe {
   display: flex;
   align-items: center;
