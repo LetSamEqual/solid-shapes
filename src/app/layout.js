@@ -31,7 +31,33 @@ const dm_sans = DM_Sans({
 
 export const metadata = {
   title: "Solid Shapes",
-  description: "Create something that people want to learn about",
+  description: "Give people a reason to listen",
+  openGraph: {
+    title: "Solid Shapes",
+    description: "Give people a reason to listen",
+    url: "https://www.solid-shapes.com.au/",
+    siteName: "Solid Shapes",
+    images: [
+      {
+        url: "hhttps://solid-shapes-images.s3.ap-southeast-2.amazonaws.com/solid-shapes-og-twitter.png", // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "https://solid-shapes-images.s3.ap-southeast-2.amazonaws.com/solid-shapes-og.png", // Must be an absolute URL
+        width: 1200,
+        height: 630,
+        alt: "Solid Shapes open graphs image",
+      },
+    ],
+    locale: "en_AU",
+    type: "website",
+  },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/shortcut-icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
