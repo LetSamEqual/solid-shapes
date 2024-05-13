@@ -10,6 +10,8 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [responseMessage, setResponseMessage] = useState("Send");
+
   const onChange = (e) => {
     e.preventDefault();
     const inputName = e.target.name;
@@ -28,13 +30,21 @@ const ContactForm = () => {
           "content-type": "application/json",
         },
       });
-      console.log(res);
       if (!res.ok) {
         throw new Error(`An error has occured, code: ${res.status}`);
       }
     } catch (error) {
       console.log(error);
     }
+    setFormData({
+      username: "",
+      email: "",
+      message: "",
+    });
+    setResponseMessage("Sent!");
+    setTimeout(() => {
+      setResponseMessage("Send");
+    }, 3000);
   };
 
   return (
@@ -51,6 +61,7 @@ const ContactForm = () => {
           placeholder="e.g. Linus Torvalds"
           required
           onChange={onChange}
+          value={formData.username}
         />
         <label>
           Email<span className={styles.asterisk}>*</span>
@@ -63,6 +74,7 @@ const ContactForm = () => {
           placeholder="e.g. RStallman@gnumail.com"
           required
           onChange={onChange}
+          value={formData.email}
         />
         <label>
           Message<span className={styles.asterisk}>*</span>
@@ -77,9 +89,10 @@ const ContactForm = () => {
           placeholder="e.g. ~$ Hello world!"
           required
           onChange={onChange}
+          value={formData.message}
         />
 
-        <button type="submit">Send</button>
+        <button type="submit">{responseMessage}</button>
       </form>
     </div>
   );
