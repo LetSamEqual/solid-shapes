@@ -19,7 +19,7 @@ export async function POST(req, res) {
     You can reach them at: ${email}`,
   };
 
-  await sgMail
+  sgMail
     .send(msg)
     .then((response) => {
       console.log(response[0].statusCode);

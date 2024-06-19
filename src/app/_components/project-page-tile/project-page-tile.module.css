@@ -2,125 +2,59 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 10px;
-  width: 700px;
+  width: 600px;
   height: 200px;
   overflow: hidden;
   border-radius: 30px;
-  border: 2px solid white;
+  border: 2px solid #fcae3c;
 }
 
 .titleContainer {
-  width: 30%;
+  width: 240px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #1c101868;
+  background-color: #fcae3c;
   backdrop-filter: blur(10px);
+  color: #1c1018;
+  padding: 5px;
 }
 
 .blankContainer {
-  width: 70%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 200px;
 }
 
 .projectDescriptionContainer {
   opacity: 1;
-  width: 150%;
+  width: 100%;
   height: 200px;
-  z-index: 4;
-  position: absolute;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 15px;
-  transform: translate(50%, 0px);
-  transition: all 0.8s ease-out;
-  /* background-image: linear-gradient(#fa726800, #eac33500, #ac4b5d00);
-  background-image: linear-gradient(63deg, #fa7268, #eac335); */
+  justify-content: center;
+  padding: 10px;
   font-size: 1rem;
-  z-index: 3;
-  color: black;
-  overflow: hidden;
+  color: white;
+  background-color: #1c101868;
 }
 
 .projectDescription {
-  width: 80%;
-  padding-left: 200px;
-  z-index: 4;
+  width: 100%;
 }
 
-.container:hover .projectDescriptionContainer {
-  opacity: 1;
-  transform: translate(-25%, 0px);
-}
-
-.angledDiv {
-  position: absolute;
-  width: 1200px;
-  height: 1200px;
-  transform: translate(-40px, 320px);
-  background-color: #fa7268;
-  background-image: linear-gradient(45deg, #fa7268, #eac335);
-  z-index: 2;
-  border-radius: 999999999px;
-}
-
-@media only screen and (max-width: 700px) {
+@media (max-width: 700px) {
   .container {
-    width: 330px;
-    min-width: 310px;
-    height: 150px;
+    width: 380px;
   }
 
   .titleContainer {
-    font-size: 0.5rem;
+    width: 200px;
+    font-size: 0.7rem;
   }
 
   .projectDescriptionContainer {
-    opacity: 1;
-    width: 200%;
-    height: 150px;
-    z-index: 4;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0px;
-    transform: translate(30%, 0px);
-    transition: all 0.8s ease-out;
-    /* background-image: linear-gradient(#fa726800, #eac33500, #ac4b5d00);
-  background-image: linear-gradient(63deg, #fa7268, #eac335); */
-    font-size: 1rem;
-    z-index: 3;
-    color: black;
-    overflow: hidden;
-  }
-
-  .projectDescription {
-    width: 85%;
-    padding-left: 180px;
-    z-index: 4;
-    font-size: 0.65rem;
-  }
-
-  .container:hover .projectDescriptionContainer {
-    opacity: 1;
-    transform: translate(-38%, 0px);
-  }
-
-  .angledDiv {
-    position: absolute;
-    width: 1200px;
-    height: 1200px;
-    transform: translate(-40px, 320px);
-    background-color: #fa7268;
-    background-image: linear-gradient(45deg, #fa7268, #eac335);
-    z-index: 2;
-    border-radius: 999999999px;
+    font-size: 0.8rem;
   }
 }

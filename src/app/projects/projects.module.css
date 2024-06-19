@@ -1,12 +1,11 @@
 .linksContainer {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   font-size: 0.8em;
   padding: 5%;
   padding-top: 20vh;
-  gap: 40px;
+  gap: 80px;
   color: white;
 }

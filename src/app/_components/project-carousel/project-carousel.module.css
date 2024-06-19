@@ -7,17 +7,3 @@
   overflow: auto;
   -ms-overflow-style: none;
 }
-
-.container::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.container::-webkit-scrollbar-track {
-  background-color: #1c1018;
-}
-
-.container::-webkit-scrollbar-thumb {
-  background-color: #eac435;
-  border-radius: 20px;
-}

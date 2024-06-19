@@ -4,7 +4,7 @@ const projects = [
     name: "Mortgage Budget",
     subheader: "Budgeting website",
     projectCardDescription:
-      "A budgeting tool that would allow people to calculate the mortgage they could afford and budget accordingly. The finished product could juggle multiple inputs, display results in real time and save results between visits. In addition, the website included written resources and engaging copy to help first homebuyers, and improve the site’s SEO.",
+      "A budgeting tool that would allow people to calculate the mortgage they could afford and budget accordingly. The finished product could juggle multiple inputs, display results in real time and save results between visits. In addition, the website included written resources to help first homebuyers and improve the site’s SEO.",
     backgroundImage:
       "../../../assets/project-pics/mortgage-budget-demo-pics/mortgage-budget-card-pic.jpg",
     route: "/projects/mortgage-budget",
@@ -14,7 +14,7 @@ const projects = [
     name: "Crown Clothing",
     subheader: "Ecommerce website",
     projectCardDescription:
-      "An ecommerce site for small fashion outlet ‘Crown Clothing’. On completion the site included five product pages, a working sign-in page and a check-out page. The design also allowed Crown Clothing to self-manage their website in a ‘code free’ environment simply by updating their own product database.",
+      "An ecommerce site for small fashion outlet ‘Crown Clothing’. On completion the site included five product pages, a working sign-in page and a check-out page. The design also allowed Crown Clothing to self-manage their website in a ‘code free’ environment by simply updating their own product database.",
     backgroundImage:
       "../../../assets/project-pics/crwn-clothing-demo-pics/crwn-clothing-card-pic.png",
     route: "/projects/crwn-clothing",

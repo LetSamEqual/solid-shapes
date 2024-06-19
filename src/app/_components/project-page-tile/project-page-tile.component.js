@@ -10,7 +10,6 @@ const ProjectTile = ({ props }) => {
         </div>
         <div className={styles.blankContainer}>
           <div className={styles.projectDescriptionContainer}>
-            <div className={styles.angledDiv}></div>
             <p className={styles.projectDescription}>
               {props.projectCardDescription}
             </p>

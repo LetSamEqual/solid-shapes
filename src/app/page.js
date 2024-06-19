@@ -6,38 +6,24 @@ import Carousel from "./_components/project-carousel/project-carousel.component"
 import Navbar from "./_components/navbar/navbar.component";
 import Proficiencies from "./_components/proficiencyGraphic/proficiencyGraphic.component";
 import { useState, useRef } from "react";
-import Timeline from "./_components/programming-timeline/programming-timeline";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
-  const [opacityLevel, setOpacityLevel] = useState(1);
 
   const sectionOneRef = useRef();
   const sectionTwoRef = useRef();
 
   const handleScroll = (e) => {
     const sectionOneHeight = sectionOneRef.current.clientHeight;
-    const sectionTwoHeight = sectionTwoRef.current.clientHeight;
 
     const target = e.currentTarget;
 
-    if (target.scrollTop < sectionOneHeight + 79) {
+    if (target.scrollTop < sectionOneHeight) {
       setScrolled(false);
     }
-    if (target.scrollTop > sectionOneHeight + 80) {
+    if (target.scrollTop > sectionOneHeight) {
       setScrolled(true);
     }
-
-    // if (target.scrollTop < sectionOneHeight + 449) {
-    //   setOpacityLevel(1);
-    // }
-
-    // if (target.scrollTop > sectionOneHeight + 450) {
-    //   const opacity =
-    //     1 -
-    //     ((target.scrollTop - sectionOneHeight - 450) / sectionTwoHeight) * 4;
-    //   setOpacityLevel(opacity);
-    // }
   };
 
   return (
@@ -79,10 +65,7 @@ export default function Home() {
           ref={sectionTwoRef}
           className={`${styles.proficiencyContainer}`}
         >
-          <div
-            className={styles.proficiencyComponentContainer}
-            // style={{ opacity: `${opacityLevel}` }}
-          >
+          <div className={styles.proficiencyComponentContainer}>
             <Proficiencies />
           </div>
         </section>
