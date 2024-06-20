@@ -1,19 +1,7 @@
 import { NextResponse } from "next/server";
-import { getSecret } from "../../../../aws-config";
-
-export async function getServerSideProps() {
-  const secret = await getSecret();
-  const secretValue = JSON.parse(secret)[process.env.SENDGRID_API_KEY];
-
-  return {
-    props: {
-      secretValue,
-    },
-  };
-}
 
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(secretValue);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req, res) {
   const data = await req.json();
