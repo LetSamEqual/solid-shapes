@@ -1,0 +1,24 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-solidshapes-dev-b3e28-authRole",
+      "UnauthRoleArn": "arn:aws:iam::381492127433:role/amplify-solidshapes-dev-b3e28-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::381492127433:role/amplify-solidshapes-dev-b3e28-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-solidshapes-dev-b3e28-deployment",
+      "UnauthRoleName": "amplify-solidshapes-dev-b3e28-unauthRole",
+      "StackName": "amplify-solidshapes-dev-b3e28",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:381492127433:stack/amplify-solidshapes-dev-b3e28/0553d5b0-2ec5-11ef-a1a2-02aed126061b",
+      "AmplifyAppId": "d39pzgthzw73q5"
+    },
+    "categories": {
+      "function": {
+        "solidshapessendgrid": {
+          "secretsPathAmplifyAppId": "d39pzgthzw73q5",
+          "deploymentBucketName": "amplify-solidshapes-dev-b3e28-deployment",
+          "s3Key": "amplify-builds/solidshapessendgrid-6e4862634a357970596a-build.zip"
+        }
+      }
+    }
+  }
+}

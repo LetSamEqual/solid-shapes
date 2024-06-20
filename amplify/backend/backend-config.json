@@ -1,0 +1,36 @@
+{
+  "function": {
+    "solidshapessendgrid": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_solidshapessendgrid_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "solidshapessendgrid"
+        }
+      ]
+    },
+    "AMPLIFY_function_solidshapessendgrid_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "solidshapessendgrid"
+        }
+      ]
+    },
+    "AMPLIFY_function_solidshapessendgrid_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "solidshapessendgrid"
+        }
+      ]
+    }
+  }
+}
