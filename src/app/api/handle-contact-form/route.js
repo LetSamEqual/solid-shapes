@@ -1,9 +1,16 @@
 import { NextResponse } from "next/server";
 
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req, res) {
+  const sendgridApiKey = process.env.SENDGRID_API_KEY;
+  if (!sendgridApiKey) {
+    return res
+      .status(500)
+      .json({ error: "SendGrid API key is not configured" });
+  }
+  sgMail.setApiKey(sendgridApiKey);
+
   const data = await req.json();
 
   const { username, email, message } = data;
