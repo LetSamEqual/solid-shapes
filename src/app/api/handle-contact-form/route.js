@@ -1,14 +1,16 @@
 import { NextResponse } from "next/server";
-const aws = require("aws-sdk");
+import { getSecret } from "../../../../aws-config";
 
-// const { Parameters } = await (new aws.SSM())
-//   .getParameters({
-//     Names: ["SENDGRID_API_KEY"].map(secretName => process.env[secretName]),
-//     WithDecryption: true,
-//   })
-//   .promise();
+export async function getServerSideProps() {
+  const secret = await getSecret();
+  const secretValue = JSON.parse(secret)[process.env.SENDGRID_API_KEY];
 
-// Parameters will be of the form { Name: 'secretName', Value: 'secretValue', ... }[]
+  return {
+    props: {
+      secretValue,
+    },
+  };
+}
 
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
