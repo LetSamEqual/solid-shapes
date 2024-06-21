@@ -26,15 +26,23 @@ export async function POST(req, res) {
     You can reach them at: ${email}`,
   };
 
-  sgMail
-    .send(msg)
-    .then((response) => {
-      console.log(response[0].statusCode);
-      console.log(response[0].headers);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+  // sgMail
+  //   .send(msg)
+  //   .then((response) => {
+  //     console.log(response[0].statusCode);
+  //     console.log(response[0].headers);
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //   });
+
+  try {
+    const send = await sgMail.send(msg);
+    console.log("sended: ", send);
+  } catch (error) {
+    console.error(error);
+    return { success: false };
+  }
 
   return NextResponse.json({ submitted: true });
 }
