@@ -82,19 +82,21 @@ const Home = () => {
         .timeline()
         .to(blobContainer.current, {
           scale: 5,
-          duration: 5,
+          duration: 3,
           ease: "none",
         })
         .to(section1Container.current, {
           backgroundColor: "#1c1018",
-          duration: 0.5,
+          duration: 0.1,
         })
         .to(blobContainer.current, {
           display: "none",
+          duration: 0.1,
         })
         .to(intro.current, {
           opacity: 0,
           ease: "none",
+          duration: 2,
         })
         .to(
           circles.current,
@@ -105,7 +107,7 @@ const Home = () => {
             ],
             duration: 5,
           },
-          "<+=1.5"
+          "<2.5"
         )
         .to(
           yellowCircle.current,
@@ -121,6 +123,7 @@ const Home = () => {
           {
             opacity: 1,
             motionPath: [{ x: "7vw", y: 0 }],
+            ease: "expoScale(0.5,7,none)",
             duration: 2,
           },
           ">"
@@ -129,7 +132,8 @@ const Home = () => {
           purpleCircle.current,
           {
             motionPath: [{ x: "7vw", y: 0 }],
-            duration: 3,
+            ease: "expoScale(0.5,7,none)",
+            duration: 2,
           },
           "<"
         )
@@ -138,17 +142,19 @@ const Home = () => {
           {
             opacity: 1,
             motionPath: [{ x: "14vw", y: 0 }],
-            duration: 3,
+            ease: "expoScale(0.5,7,none)",
+            duration: 2,
           },
           ">"
         )
         .from(s1Header.current, {
           opacity: 0,
           motionPath: [{ x: "-30vw", y: 0 }],
-          ease: CustomEase.create(
-            "custom",
-            "M0,0 C0,0 0.386,0.02 0.431,0.035 0.47,0.048 0.553,0.051 0.59,0.069 0.626,0.087 0.704,0.124 0.739,0.148 0.772,0.172 0.813,0.233 0.836,0.269 0.859,0.306 0.864,0.359 0.884,0.402 0.903,0.443 0.916,0.546 0.93,0.592 0.944,0.641 0.952,0.73 0.965,0.783 0.978,0.839 1,1 1,1 "
-          ),
+          ease: "expoScale(0.5,7,none)",
+          // ease: CustomEase.create(
+          //   "custom",
+          //   "M0,0 C0,0 0.386,0.02 0.431,0.035 0.47,0.048 0.553,0.051 0.59,0.069 0.626,0.087 0.704,0.124 0.739,0.148 0.772,0.172 0.813,0.233 0.836,0.269 0.859,0.306 0.864,0.359 0.884,0.402 0.903,0.443 0.916,0.546 0.93,0.592 0.944,0.641 0.952,0.73 0.965,0.783 0.978,0.839 1,1 1,1 "
+          // ),
           duration: 5,
         });
 
@@ -350,7 +356,7 @@ const Home = () => {
         className={`${styles.s3__content__container} ${styles.flex__column__center}`}
       >
         <h2 className={`${styles.header}`}>
-          Designed based on <br></br>your needs
+          Designed based <br></br> on your needs
         </h2>
         <div
           className={`${styles.two__column__container} ${styles.flex__row__center}`}
@@ -406,81 +412,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// import Carousel from "./_components/project-carousel/project-carousel.component";
-// import Navbar from "./_components/navbar/navbar.component";
-// import Proficiencies from "./_components/proficiencyGraphic/proficiencyGraphic.component";
-// import { useState, useRef } from "react";
-
-// export default function Home() {
-//   const [scrolled, setScrolled] = useState(false);
-
-//   const sectionOneRef = useRef();
-//   const sectionTwoRef = useRef();
-
-//   const handleScroll = (e) => {
-//     const sectionOneHeight = sectionOneRef.current.clientHeight;
-
-//     const target = e.currentTarget;
-
-//     if (target.scrollTop < sectionOneHeight) {
-//       setScrolled(false);
-//     }
-//     if (target.scrollTop > sectionOneHeight) {
-//       setScrolled(true);
-//     }
-//   };
-
-//   return (
-//     <div className={styles.pageContainer} onScroll={handleScroll}>
-//       <Navbar props={scrolled} />
-//       <main id="main" className={styles.sectionsContainer}>
-//         <section ref={sectionOneRef} className={`${styles.introContainer}`}>
-//           <h1 className={styles.title}>Solid Shapes</h1>
-//           <div className={styles.subheaderContainer}>
-//             <h3 className={styles.introText}>Your next</h3>
-//             <div className={styles.rolesCeiling}></div>
-//             <div className={styles.rolesFloor}></div>
-//             <div className={styles.introSpanContainer}>
-//               <h3
-//                 className={`${styles.introSpanCommon} ${styles.firstIntroSpan}`}
-//               >
-//                 web developer
-//               </h3>{" "}
-//               <h3
-//                 className={`${styles.introSpanCommon} ${styles.secondIntroSpan}`}
-//               >
-//                 UI specialist
-//               </h3>
-//               <h3
-//                 className={`${styles.introSpanCommon} ${styles.thirdIntroSpan}`}
-//               >
-//                 content writer
-//               </h3>
-//               <h3
-//                 className={`${styles.introSpanCommon} ${styles.fourthIntroSpan}`}
-//               >
-//                 web developer
-//               </h3>
-//             </div>
-//           </div>
-//         </section>
-//         <section className={styles.firstTransition}></section>
-//         <section
-//           ref={sectionTwoRef}
-//           className={`${styles.proficiencyContainer}`}
-//         >
-//           <div className={styles.proficiencyComponentContainer}>
-//             <Proficiencies />
-//           </div>
-//         </section>
-//         <section className={`${styles.projectContainer}`}>
-//           <h2>Portfolio</h2>
-//           <div className={styles.carouselContainer}>
-//             <Carousel />
-//           </div>
-//         </section>
-//       </main>
-//     </div>
-//   );
-// }
