@@ -9,7 +9,7 @@ import { MotionPathPlugin } from "gsap/all";
 import { CustomEase } from "gsap/all";
 import KUTE, { borderRadius, translate } from "kute.js";
 import Navbar from "@components/navbar/navbar.component.js";
-import PortfolioCircle from "../_components/portfolio-circle/portfolio-circle.component";
+import PortfolioCircle from "@components/portfolio-circle/portfolio-circle.component";
 import SmoothScrolling from "@components/smooth-scrolling/smooth-scrolling";
 import Image from "next/image";
 import ContactForm from "@components/contact-form/contact-form";
