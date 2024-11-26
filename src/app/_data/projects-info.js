@@ -21,13 +21,13 @@ const projects = [
   },
   {
     id: "3",
-    name: "Los Turista",
+    name: "Out of Office",
     subheader: "Travel blog",
     projectCardDescription:
       "A customised travel blog that allowed the user to add and edit the site on the go and likely in a low tech environment. The website was designed to mirror the intended style of the writing, and could be entirely controlled by the user’s iPad after its initial deployment.",
     backgroundImage:
       "../../../assets/project-pics/travel-blog-demo-pics/travel-blog-card-pic.png",
-    route: "projects/los-turista",
+    route: "projects/out-of-office",
   },
   {
     id: "4",

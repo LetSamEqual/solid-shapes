@@ -4,9 +4,13 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 90vh;
-  height: 90vh;
-  border-radius: 9000000000000px;
+  max-width: 700px;
+  max-height: 700px;
+  width: 80vw;
+  height: 80vw;
+  min-width: 350px;
+  min-height: 350px;
+  border-radius: 50%;
 }
 
 .formContainer {
@@ -16,15 +20,31 @@
   align-items: center;
   background-color: #1c1018;
   color: white;
-  width: 70vh;
-  height: 70vh;
+  width: 70vw;
+  height: 70vw;
   max-width: 600px;
   max-height: 600px;
+  min-width: 350px;
+  min-height: 350px;
   gap: 15px;
   padding: 40px;
-  border-radius: 9000000000000px;
+  border-radius: 50%;
+  font-size: clamp(8px, 8px + 1vw, 20px);
+}
+
+.formContainer input {
+  min-height: 20px;
 }
 
 .asterisk {
   color: #ed6a5a;
+}
+
+.button {
+  cursor: pointer;
+  background-color: #ed6a5a;
+  border-radius: 20px;
+  padding: 10px;
+  width: 90px;
+  text-align: center;
 }

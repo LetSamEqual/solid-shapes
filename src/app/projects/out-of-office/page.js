@@ -1,4 +1,4 @@
-import styles from "./los-turista.module.css";
+import styles from "./out-of-office.module.css";
 import Navbar from "@/app/_components/navbar/navbar.component";
 
 const LosTurista = () => {
@@ -7,7 +7,7 @@ const LosTurista = () => {
       <Navbar props={true} />
       <section className={styles.landingContainer}>
         <h1>
-          Los <span className={styles.headingAccent}>Turista</span>
+          Out of <span className={styles.headingAccent}>Office</span>
         </h1>
         <h2>Travel blog</h2>
         <h3>Tools: React, GitHub Actions, GitHub Pages, CMS</h3>

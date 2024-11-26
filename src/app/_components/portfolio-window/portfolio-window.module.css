@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 600px;
+  height: 600px;
+}
+
+.button {
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.project__heading {
+  position: absolute;
+  height: fit-content;
+  width: 120px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #1c10182e;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}

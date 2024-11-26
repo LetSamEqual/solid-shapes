@@ -1,5 +1,6 @@
 import { Lexend_Peta, Montserrat, Poppins, DM_Sans } from "next/font/google";
 import "./globals.css";
+import fs from "fs";
 
 const lexend_peta = Lexend_Peta({
   weight: ["100", "200", "300"],
@@ -30,6 +31,7 @@ const dm_sans = DM_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL("http://localhost:3000"),
   title: "Solid Shapes",
   description: "Give people a reason to listen",
   openGraph: {
@@ -39,7 +41,7 @@ export const metadata = {
     siteName: "Solid Shapes",
     images: [
       {
-        url: "hhttps://solid-shapes-images.s3.ap-southeast-2.amazonaws.com/solid-shapes-og-twitter.png", // Must be an absolute URL
+        url: "https://solid-shapes-images.s3.ap-southeast-2.amazonaws.com/solid-shapes-og-twitter.png", // Must be an absolute URL
         width: 800,
         height: 600,
       },

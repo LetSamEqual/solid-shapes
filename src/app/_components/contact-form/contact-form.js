@@ -92,7 +92,9 @@ const ContactForm = () => {
           value={formData.message}
         />
 
-        <button type="submit">{responseMessage}</button>
+        <button className={styles.button} type="submit">
+          {responseMessage}
+        </button>
       </form>
     </div>
   );

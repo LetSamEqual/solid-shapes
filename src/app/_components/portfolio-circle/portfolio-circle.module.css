@@ -1,0 +1,122 @@
+.flex__column__center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.yellow__background {
+  background-color: #eac435;
+  color: black;
+}
+
+.salmon__background {
+  background-color: #ed6a5a;
+  color: black;
+}
+
+.light__purple__background {
+  background-color: #ac4b5c;
+  color: white;
+}
+
+.dark__purple__background {
+  background-color: #5e2d40;
+  color: white;
+}
+
+.black__background {
+  background-color: #1c1018;
+  color: white;
+}
+
+.small__circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.window__container {
+  width: 20vw;
+  height: 20vw;
+  min-width: 320px;
+  min-height: 320px;
+  border-radius: 50%;
+  color: white;
+  position: relative;
+}
+
+.salmon__circle {
+  top: 0;
+  right: 0;
+  transform: translate(20%, 0%);
+  scale: 1.2;
+}
+
+.purple__circle {
+  top: 0;
+  right: 0;
+  transform: translate(160%, 210%);
+}
+
+.black__circle {
+  top: 0;
+  right: 0;
+  transform: translate(220%, 470%);
+}
+
+.pauseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.pauseButton:hover {
+  scale: 1.1;
+}
+
+.img__container {
+  position: relative;
+  width: 330px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.portfolio__img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.oooImg {
+  top: 320px;
+  left: 80px;
+  transform: rotate(25deg);
+}
+
+.mortgageBudgetImg {
+  top: 320px;
+  left: 80px;
+  transform: rotate(25deg);
+}
+
+.second__ffImg {
+  top: 320px;
+  left: 80px;
+  transform: rotate(25deg);
+}

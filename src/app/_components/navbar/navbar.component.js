@@ -2,40 +2,23 @@
 
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const Navbar = ({ props }) => {
-  const pathname = usePathname();
-
-  let linkStyle;
-
-  if (props) {
-    linkStyle = styles.activeWhite;
-  } else {
-    linkStyle = styles.activeBlack;
-  }
-
   return (
     <div
-      className={`${styles.linksContainer} ${props ? styles.black : ""}
+      className={`${styles.linksContainer}
       `}
     >
-      <Link className={pathname === "/" ? `${linkStyle}` : ""} href="/">
+      <Link className={styles.linkStyle} href="/">
         Home
       </Link>
-      <Link className={pathname === "/bio" ? `${linkStyle}` : ""} href="/bio">
+      <Link className={styles.linkStyle} href="/bio">
         Bio
       </Link>
-      <Link
-        className={pathname === "/projects" ? `${linkStyle}` : ""}
-        href="/projects"
-      >
+      <Link className={styles.linkStyle} href="/projects">
         Projects
       </Link>
-      <Link
-        className={pathname === "/contact" ? `${linkStyle}` : ""}
-        href="/contact"
-      >
+      <Link className={styles.linkStyle} href="/contact">
         Contact
       </Link>
     </div>
