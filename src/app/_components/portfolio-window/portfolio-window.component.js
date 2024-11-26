@@ -138,7 +138,9 @@ const PortfolioWindow = () => {
 
   return (
     <div className={`${styles.container}`} onMouseLeave={onContainerLeave}>
-      <button
+      <Link
+        href="https://d2j3oro2v8rwif.cloudfront.net/"
+        target="_blank"
         className={`${styles.button}`}
         style={{
           width: `${boxSizes.box1.width}%`,
@@ -163,7 +165,7 @@ const PortfolioWindow = () => {
           }}
           alt="test"
         />
-      </button>
+      </Link>
 
       <Link
         href="/projects/mortgage-budget"

@@ -77,14 +77,16 @@ const PortfolioCircle = () => {
       className={`${styles.window__container} ${styles.flex__column__center}`}
     >
       <div className={`${styles.img__container}`}>
-        <Image
-          src={ffLandingPage}
-          alt="womans face with glitter in blue light looking up and away from camera"
-          width={320}
-          height={320}
-          className={`${styles.portfolio__img} ${styles.ffImg}`}
-          ref={ffImg}
-        />
+        <Link href="https://d2j3oro2v8rwif.cloudfront.net/" target="_blank">
+          <Image
+            src={ffLandingPage}
+            alt="womans face with glitter in blue light looking up and away from camera"
+            width={320}
+            height={320}
+            className={`${styles.portfolio__img} ${styles.ffImg}`}
+            ref={ffImg}
+          />
+        </Link>
         <Link href="/projects/los-turista">
           <Image
             src={outOfOffice}
